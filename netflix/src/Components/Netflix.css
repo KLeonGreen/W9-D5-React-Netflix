@@ -1,0 +1,90 @@
+body {
+  background-color: black;
+}
+
+.movie-row {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.carousel-indicators {
+  display: none;
+}
+
+.movie-cover {
+  width: 99%;
+  transition: 0.3s;
+  opacity: 0.7;
+}
+.movie-cover:hover {
+  opacity: 1;
+  transition: 0.3s;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+#logo {
+  height: 48px;
+}
+
+.bg-dark {
+  background-color: #000000 !important;
+}
+
+#avatar {
+  height: 36px;
+}
+
+.container {
+  max-width: 1320px;
+}
+
+li.nav-item {
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.row {
+  margin-block-start: 15px;
+  margin-block-end: 35px;
+}
+
+.right-corner {
+  display: flex;
+  align-items: center;
+  width: 240px;
+  color: white;
+  justify-content: space-between;
+}
+
+.menu-items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.genre-details {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 10px;
+  margin-block: 30px;
+}
+
+/* .main-title {
+  width: 300px;
+} */
+
+h3,
+h5 {
+  color: white;
+}
+
+.image-card {
+  height: 141.2px;
+}
+.image-card img {
+  height: 100%;
+  object-fit: cover;
+}
