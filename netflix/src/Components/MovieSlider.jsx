@@ -1,11 +1,12 @@
 import { Component } from "react";
-import { Carousel, Col, Container, Row } from "react-bootstrap";
+import { Carousel, Col, Container, Row, Spinner } from "react-bootstrap";
 import "../Components/Netflix.css";
 import Movie from "./Movie";
 
 class MovieSlider extends Component {
   state = {
     film: [],
+    isLoading: false,
   };
   getMovies = async () => {
     try {
@@ -16,6 +17,7 @@ class MovieSlider extends Component {
         const movieArray = data.Search;
         console.log(movieArray);
         this.setState({ film: movieArray });
+        this.setState({ isLoading: false });
       }
     } catch (error) {
       console.log(error);
@@ -24,13 +26,21 @@ class MovieSlider extends Component {
 
   componentDidMount() {
     this.getMovies();
+    this.setState({ isLoading: true });
   }
 
   render() {
     return (
       <>
-        <Container fluid>
+        {this.state.isLoading && (
+          <Spinner className="Loader" animation="grow" role="status">
+            <span className="visually-hidden"></span>
+          </Spinner>
+        )}
+
+        <Container fluid className="movie-rows">
           <h5>{this.props.title}</h5>
+
           <Carousel>
             <Carousel.Item>
               <Row className="d-flex">

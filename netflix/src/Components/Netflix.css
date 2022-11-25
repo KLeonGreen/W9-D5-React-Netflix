@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: rgb(36, 36, 36);
 }
 
 .movie-row {
@@ -28,7 +28,7 @@ body {
 }
 
 .bg-dark {
-  background-color: #000000 !important;
+  background-color: transparent !important;
 }
 
 #avatar {
@@ -69,12 +69,14 @@ li.nav-item {
   display: flex;
   justify-content: space-between;
   padding-inline: 10px;
-  margin-block: 30px;
+  margin-block-start: 55vh;
+  margin-block-end: 5vh;
 }
 
-/* .main-title {
-  width: 300px;
-} */
+.main-title {
+  width: 240px;
+  justify-content: space-between;
+}
 
 h3,
 h5 {
@@ -87,4 +89,35 @@ h5 {
 .image-card img {
   height: 100%;
   object-fit: cover;
+}
+
+.Loader {
+  color: red;
+}
+
+.cover-image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.cover-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.cover-content {
+  top: 60%;
+  color: white;
+  margin-top: 3px;
+  position: absolute;
+  left: 30px;
+}
+.cover-content p {
+  width: 520px;
+}
+
+h1 {
+  font-weight: bold;
 }

@@ -4,6 +4,7 @@ import TopNavbar from "./Components/TopNavbar";
 import MovieSlider from "./Components/MovieSlider";
 import Footer from "./Components/Footer";
 import Pagetitle from "./Components/Pagetitle";
+import Cover from "./Components/Cover";
 
 function App() {
   return (
@@ -11,6 +12,10 @@ function App() {
       <div>
         <TopNavbar />
       </div>
+      <div>
+        <Cover />
+      </div>
+
       <div>
         <Pagetitle />
       </div>
@@ -22,6 +27,9 @@ function App() {
       </div>
       <div>
         <MovieSlider title="Lord of the rings" />
+      </div>
+      <div>
+        <MovieSlider title="Twilight" />
       </div>
       <div>
         <Footer />
